@@ -50,15 +50,15 @@ const referenceRouter = require('./Routers/referenceRouter')
 const forumRouter = require('./Routers/forumRouter')
 const submitRouter = require('./Routers/Postroutes');
 
-app.use('/api', authRouter);
-app.use('/api', projectRouter);
-app.use('/api', referenceRouter)
-app.use('/api', forumRouter)
+app.use('/', authRouter);
+app.use('/', projectRouter);
+app.use('/', referenceRouter)
+app.use('/', forumRouter)
 
 
 // app.get('/*',function(req,res){res.sendFile(path.join(__dirname,'../Frontend/index.html'));});
 
-app.use('/api', submitRouter);
+app.use('/', submitRouter);
 
 const port = process.env.PORT || 3001
 app.listen(port, () => {
