@@ -14,6 +14,8 @@ app.use(cors({
 }))
 
 //app.use('/uploads', express.static('Uploads'));
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 
 const authRouter = require('./Routers/authRouter');
 const projectRouter = require('./Routers/projectRouter')
