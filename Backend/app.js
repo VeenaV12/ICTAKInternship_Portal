@@ -6,11 +6,16 @@ require('./DB/mongoDB')
 const app = express()
 app.use(express.json());
 const corsOptions = {
-  origin: "*",
+  origin: (origin, callback) => {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true); // Allow the origin
+    } else {
+      callback(new Error('Not allowed by CORS')); // Reject the origin
+    }
+  },
   credentials: true,
-  methods: ['POST', 'GET', 'DELETE', 'PUT']
+  methods: ['POST', 'GET', 'DELETE', 'PUT'],
 };
-
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
 
