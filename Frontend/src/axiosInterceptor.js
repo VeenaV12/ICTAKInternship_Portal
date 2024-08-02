@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'ictak-internship-portalserver-veena-s-projects.vercel.app',
+  baseURL: 'ictak-internship-portalserver-veena-s-projects.vercel.app/api',
 });
 
 axiosInstance.interceptors.request.use(
