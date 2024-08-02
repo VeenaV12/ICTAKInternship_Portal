@@ -13,7 +13,7 @@ app.use(cors({
   methods:['POST','GET','DELETE','PUT']
 }))
 
-app.use('/uploads', express.static('Uploads'));
+//app.use('/uploads', express.static('Uploads'));
 
 const authRouter = require('./Routers/authRouter');
 const projectRouter = require('./Routers/projectRouter')
