@@ -13,6 +13,11 @@ app.use(cors({
   methods:['POST','GET','DELETE','PUT']
 }))
 
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the root path!');
+});
+
 //app.use('/uploads', express.static('Uploads'));
 app.get('/favicon.ico', (req, res) => res.status(204).end());
 
