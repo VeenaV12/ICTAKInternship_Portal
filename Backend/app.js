@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use(cors({
-  origin:"https://group2vercel-frontend.vercel.app",
+  origin:"https://ictak-internship-portalclient-qfdo1oylr-veena-s-projects.vercel.app/",
   credentials:true,
   methods:['POST','GET','DELETE','PUT']
 }))
