@@ -6,7 +6,7 @@ require('./DB/mongoDB')
 const app = express()
 app.use(express.json());
 const corsOptions = {
-  origin: "ictak-internship-portalclient-veena-s-projects.vercel.app",
+  origin: "https://ictak-internship-portalclient-gymgffgqk-veena-s-projects.vercel.app",
   credentials: true,
   methods: ['POST', 'GET', 'DELETE', 'PUT']
 };
