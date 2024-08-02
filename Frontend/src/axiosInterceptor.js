@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://group2vercel-backend.vercel.app',
+  baseURL: 'https://ictak-internship-portalserver-n3joa94kw-veena-s-projects.vercel.app',
 });
 
 axiosInstance.interceptors.request.use(
