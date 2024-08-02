@@ -5,14 +5,13 @@ require('./DB/mongoDB')
 
 const app = express()
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: "https://ictak-internship-portalclient-qfdo1oylr-veena-s-projects.vercel.app",
+  credentials: true,
+  methods: ['POST', 'GET', 'DELETE', 'PUT']
+};
 
-app.use(cors({
-  origin:"https://ictak-internship-portalclient-qfdo1oylr-veena-s-projects.vercel.app",
-  credentials:true,
-  methods:['POST','GET','DELETE','PUT']
-}))
-
+app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
   res.send('Welcome to the root path!');
